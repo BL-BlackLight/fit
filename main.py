@@ -12,6 +12,13 @@ app.mount("/css", StaticFiles(directory="css"), name="css")
 # Load HTML templates
 templates = Jinja2Templates(directory="templates")
 
+from fastapi.responses import HTMLResponse
+
+@app.get("/", response_class=HTMLResponse)
+def read_root():
+    return templates.TemplateResponse("index.html")
+
+
 # Route to show Signup Page
 @app.get("/signup")
 def signup_page(request: Request):
