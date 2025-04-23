@@ -15,8 +15,8 @@ templates = Jinja2Templates(directory="templates")
 from fastapi.responses import HTMLResponse
 
 @app.get("/", response_class=HTMLResponse)
-def read_root():
-    return templates.TemplateResponse("index.html")
+def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 # Route to show Signup Page
