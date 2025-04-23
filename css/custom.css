@@ -1,0 +1,144 @@
+*
+{
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+body{}
+header{
+    background: white;
+    padding: 0px 0;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.logo{
+    width: 20%;
+    flex: 0 1 auto;
+}
+
+.logo a{
+
+}
+.logo a img{
+
+width: 60%;
+
+margin-left: 80px;
+
+padding: 10px;
+}
+nav{
+    width: 80%;
+    flex: 0 1 auto;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+}
+
+nav ul li a:hover{
+    background: black;
+    color: white;  
+}
+
+section
+{
+	height: 100vh;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section .container{
+    height: 100vh;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 100px;
+}
+section h2{
+    background: white;
+    padding: 10px 30px;
+    font-weight: 600;
+}
+section a{
+    text-decoration: none;
+    background: #ff0000;
+    padding: 10px 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+}
+.yellow
+{
+	background-image: url(../images/f4.jpg) ;
+}
+.neon
+{
+	background-image: url(../images/f6.jpg) ;
+	
+}
+.blue
+{
+	background-image: url(../images/f2.jpg) ;
+}
+.red
+{
+	background-image: url(../images/f1.jpg) ;
+}
+.white
+{
+	background-image: url(../images/f3.jpg) ;
+}
+
+
+/**** footer ******/
+footer{
+    background: #000000;
+    color: white;
+    
+}
+footer p{
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+footer ul{
+    padding: 20px;
+}
+footer ul li{}
+footer ul li strong{
+    font-weight: 600;
+}
+footer ul li a{
+    color: #ffd84a;
+    text-decoration: none;
+    padding: 10px 0;
+}
+footer ul li a:hover{}
+.Copyrights{
+    text-align: center;
+}
+.Copyrights a{
+    color: #ffd17e;
+}
+.Copyrights a:hover{}
+.col-4{
+    width: 25%;
+    padding: 15px;
+}
