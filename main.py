@@ -7,7 +7,9 @@ from database_conn import get_db
 app = FastAPI()
 
 # Serve static files (CSS, images, etc.)
-app.mount("/css", StaticFiles(directory="css"), name="css")
+app.mount("/css", StaticFiles(directory="static/css"), name="css")
+app.mount("/images", StaticFiles(directory="static/images"), name="images")
+
 
 # Load HTML templates
 templates = Jinja2Templates(directory="templates")
