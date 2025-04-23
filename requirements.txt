@@ -4,3 +4,7 @@ jinja2
 uvicorn 
 python-dotenv
 python-multipart
+mediapipe
+opencv-python
+numpy
+
