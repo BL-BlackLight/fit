@@ -7,8 +7,7 @@ from database_conn import get_db
 app = FastAPI()
 
 # Serve static files (CSS, images, etc.)
-app.mount("/css", StaticFiles(directory="static/css"), name="css")
-app.mount("/images", StaticFiles(directory="static/images"), name="images")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 # Load HTML templates
@@ -171,9 +170,16 @@ def calculate_angle(a, b, c):
     return angle
 
 
+from fastapi.templating import Jinja2Templates
+from starlette.routing import Router
+
+templates = Jinja2Templates(directory="templates")
+
 @app.get("/pushup")
 def pushup_page(request: Request):
     return templates.TemplateResponse("pushup.html", {"request": request})
+
+from fastapi.responses import StreamingResponse
 
 @app.get("/video_feed")
 def video_feed():
